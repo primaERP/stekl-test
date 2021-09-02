@@ -1,0 +1,35 @@
+*~
+.idea
+.vscode
+.tags
+.eslintcache
+.agignore
+.history
+**/node_modules
+**/npm-debug.log
+**/lerna-debug.log
+**/dist
+**/.tmp
+coverage
+./fossology
+**/.ipynb_checkpoints
+**/.ipython
+**/.jupyter
+**/.local
+**/.cache
+**/.deploy
+**/dependencies.zip
+**/temp.ipynb
+**/__pycache__
+**/.mypy_cache
+**/.webpack_cache
+# Don't ignore these files, even though there is "/dist" in their path
+!**/from_node_modules/**
+# Local quokka specific please, please do not remove
+.quokka
+**/__sandbox.js
+**/.cypress
+.DS_Store
+third-party-licenses.txt
+
+

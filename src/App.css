@@ -1,0 +1,265 @@
+.App {
+  text-align: center;
+}
+/*
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+*/
+/*
+.App-header {
+  background-color: #32353b;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+*/
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: cornsilk;
+}
+*/
+
+label {
+  display: block;
+  clear: both;
+}
+
+.l-todo {
+  margin: 20px 20px 20px 20px;
+}
+
+.i-todo {
+  margin: 20px 2px 120px 20px;
+  height: 100px;
+  width: 200px;
+}
+
+label > input,
+label > select {
+  margin-left: 5px;
+  background-color: cadetblue;
+}
+
+/*
+label > input {
+  float: right;
+}
+*/
+.ukoly {
+  list-style-type: square;
+  text-align: left;
+  margin-left: 50px;
+}
+
+.game-info {
+  background-color: #bbe6bb;
+  font-size: 15px;
+  margin: 20px;
+  border: 3px;
+  border-color: black;
+  color: rgb(48, 31, 31);
+
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.historie {
+  background-color: #4288a8;
+  border: 3px;
+  border-color: black;
+  color: white;
+
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  font-size: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 40px;
+  height: 30px;
+  margin: 1px 1px 1px 1px;
+}
+
+.br {
+  line-break: br;
+}
+
+.square {
+  background-color: #9aa09a;
+  border: 3px;
+  border-color: black;
+  color: white;
+
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  font-size: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 30px;
+  height: 30px;
+  margin: 1px 1px 1px 1px;
+}
+
+.nazev {
+  background-color: #a0c4d6;
+  border-color: black;
+  color: rgb(19, 17, 17);
+
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  font-size: 15px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 50px;
+  height: 50px;
+  margin: 10px 10px 10px 10px;
+}
+
+.vstup {
+  background-color: #25259b;
+  border: 10px;
+  border-color: rgb(46, 187, 128);
+  color: rgb(173, 62, 62);
+
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  font-size: 15px;
+  height: 28px;
+  margin: 10px 10px 10px 10px;
+}
+
+.X {
+  background-color: #99c5d8;
+  color: rgb(49, 44, 102);
+}
+
+.O {
+  color: rgb(17, 95, 47);
+  background-color: #8dc98b;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.custom-field {
+  position: relative;
+  font-size: 16px;
+  border-top: 20px solid transparent;
+  margin-bottom: 5px;
+  --var-field-padding: 15px;
+}
+
+.custom-field input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: var(--var-field-padding);
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
+  font-size: 14px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left: var(--var-field-padding);
+  width: calc(100% - (var(--var-field-padding) * 2));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  top: 22px;
+  line-height: 100%;
+  transform: translateY(-50%);
+  color: rgb(95, 96, 155);
+  transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+}
+
+.custom-field input.dirty + .placeholder,
+.custom-field input:focus + .placeholder,
+.custom-field input:not(:placeholder-shown) + .placeholder {
+  top: -10px;
+  font-size: 10px;
+  color: #222;
+}
+
+.custom-field .error-message {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 12px;
+  background: #d30909;
+  color: #fff;
+  height: 24px;
+}
+
+.custom-field .error-message:empty {
+  opacity: 0;
+}
+
+.custom-field.two input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: linear-gradient(90deg, #222, #222) center bottom/0 0.15em
+      no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.custom-field.two input.dirty,
+.custom-field.two input:not(:placeholder-shown),
+.custom-field.two input:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
