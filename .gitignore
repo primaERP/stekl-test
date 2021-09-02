@@ -31,5 +31,5 @@ coverage
 **/.cypress
 .DS_Store
 third-party-licenses.txt
-
+.gitignore
 
